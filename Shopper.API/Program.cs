@@ -1,3 +1,4 @@
+using Shopper.API.Middlewares;
 using Shopper.Core;
 using Shopper.Infrastructure;
 
@@ -14,6 +15,9 @@ services.AddControllers();
 
 var app = builder.Build();
 // Configure HTTP request pipeline.
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
+
 app.UseRouting();
 
 app.UseAuthentication();
