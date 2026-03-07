@@ -1,6 +1,24 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using Shopper.Core;
+using Shopper.Infrastructure;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder(args);
+
+var services = builder.Services;
+
+// Add services to the container.
+services.AddInfrastructure();
+services.AddCore();
+
+// Add controllers
+services.AddControllers();
+
+var app = builder.Build();
+// Configure HTTP request pipeline.
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
