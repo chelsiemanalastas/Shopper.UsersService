@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shopper.Core\Shopper.Core.csproj" />
+    <ProjectReference Include="..\Shopper.Application\Shopper.Application.csproj" />
   </ItemGroup>
 
 </Project>
