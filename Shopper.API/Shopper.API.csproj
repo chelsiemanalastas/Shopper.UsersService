@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shopper.Core\Shopper.Core.csproj" />
+    <ProjectReference Include="..\Shopper.Application\Shopper.Application.csproj" />
     <ProjectReference Include="..\Shopper.Infrastructure\Shopper.Infrastructure.csproj" />
   </ItemGroup>
 
