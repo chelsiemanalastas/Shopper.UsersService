@@ -1,11 +1,8 @@
-using Shopper.API.Extensions;
 using Shopper.API.Middlewares;
 using Shopper.Application;
 using Shopper.Infrastructure;
-using Shopper.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.AddPresentation();
 
 var services = builder.Services;
 
@@ -19,18 +16,9 @@ var app = builder.Build();
 
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
-app.UseHttpsRedirection();
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseRouting();
 
-// Map identity endpoints
-app.MapGroup("api/identity")
-    .WithTags("Identity")
-    .MapIdentityApi<ApplicationUser>();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

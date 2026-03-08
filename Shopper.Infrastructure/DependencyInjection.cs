@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Shopper.Application.Interfaces;
-using Shopper.Infrastructure.Identity;
 using Shopper.Infrastructure.Persistence;
 
 namespace Shopper.Infrastructure;
@@ -16,12 +13,6 @@ public static class DependencyInjection
         services.AddDbContext<UsersDbContext>(options =>
             options.UseSqlServer(connectionString).EnableSensitiveDataLogging()
         );
-
-        services.AddIdentityApiEndpoints<ApplicationUser>()
-            .AddRoles<IdentityRole>()
-            .AddEntityFrameworkStores<UsersDbContext>();
-
-        services.AddScoped<IIdentityService, IdentityService>();
 
         return services;
     }
