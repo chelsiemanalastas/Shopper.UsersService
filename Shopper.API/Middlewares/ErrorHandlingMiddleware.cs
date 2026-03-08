@@ -1,4 +1,4 @@
-﻿using Shopper.Core.Exceptions;
+﻿using Shopper.Domain.Exceptions;
 
 namespace Shopper.API.Middlewares;
 
