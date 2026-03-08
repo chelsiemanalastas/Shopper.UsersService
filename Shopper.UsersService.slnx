@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Shopper.API/Shopper.API.csproj" />
-  <Project Path="Shopper.Core/Shopper.Core.csproj" />
+  <Project Path="Shopper.Application/Shopper.Application.csproj" Id="0030b875-349a-42b1-abfe-c5f190d36b54" />
+  <Project Path="Shopper.Domain/Shopper.Domain.csproj" Id="05fb84c6-afe2-4335-b4b1-2bb2d301685e" />
   <Project Path="Shopper.Infrastructure/Shopper.Infrastructure.csproj" />
 </Solution>
