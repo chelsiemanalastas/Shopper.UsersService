@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Shopper.Application.Interfaces;
 using Shopper.Infrastructure.Identity;
 using Shopper.Infrastructure.Persistence;
 
@@ -19,6 +20,8 @@ public static class DependencyInjection
         services.AddIdentityApiEndpoints<ApplicationUser>()
             .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<UsersDbContext>();
+
+        services.AddScoped<IIdentityService, IdentityService>();
 
         return services;
     }
