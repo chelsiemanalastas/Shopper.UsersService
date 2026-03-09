@@ -11,8 +11,8 @@ var services = builder.Services;
 
 // Add services to the container.
 services.AddControllers();
-services.AddApplication();
 services.AddInfrastructure(builder.Configuration);
+services.AddApplication();
 
 var app = builder.Build();
 // Configure HTTP request pipeline.
