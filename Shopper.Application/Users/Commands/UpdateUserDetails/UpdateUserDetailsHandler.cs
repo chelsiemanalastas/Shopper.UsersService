@@ -3,7 +3,7 @@ using Shopper.Application.Interfaces;
 
 namespace Shopper.Application.Users.Commands.UpdateUserDetails;
 
-public class UpdateUserDetailsHandler<TUser>(
+public class UpdateUserDetailsHandler(
         IUserContext userContext,
         IIdentityService identityService
     ) : IRequestHandler<UpdateUserDetailsCommand>
