@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Shopper.Infrastructure.Identity;
+using Shopper.Domain.Entities;
 
 namespace Shopper.Infrastructure.Persistence;
 

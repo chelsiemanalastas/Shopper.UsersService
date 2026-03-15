@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Shopper.Application.Interfaces;
+using Shopper.Domain.Entities;
 using Shopper.Infrastructure.Identity;
 using Shopper.Infrastructure.Persistence;
 
