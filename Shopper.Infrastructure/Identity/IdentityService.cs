@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Shopper.Application.Exceptions;
 using Shopper.Application.Interfaces;
+using Shopper.Domain.Entities;
 
 namespace Shopper.Infrastructure.Identity;
 
