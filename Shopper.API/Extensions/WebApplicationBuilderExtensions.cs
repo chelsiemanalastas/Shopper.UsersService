@@ -10,6 +10,7 @@ public static class WebApplicationBuilderExtensions
         var services = builder.Services;
 
         services.AddAuthentication();
+        services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(c =>
         {
@@ -17,7 +18,7 @@ public static class WebApplicationBuilderExtensions
             {
                 Name = "Authorization",
                 Type = SecuritySchemeType.Http,
-                Scheme = "bearer",
+                Scheme = "Bearer",
                 BearerFormat = "JWT",
                 In = ParameterLocation.Header
             });
