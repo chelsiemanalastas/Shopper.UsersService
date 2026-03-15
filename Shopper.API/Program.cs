@@ -11,8 +11,8 @@ var services = builder.Services;
 
 // Add services to the container.
 services.AddControllers();
-services.AddInfrastructure(builder.Configuration);
 services.AddApplication();
+services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 // Configure HTTP request pipeline.
@@ -25,6 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 // Map identity endpoints
 app.MapGroup("api/identity")

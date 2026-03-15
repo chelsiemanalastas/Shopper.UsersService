@@ -15,8 +15,11 @@ public static class WebApplicationBuilderExtensions
         {
             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
+                Name = "Authorization",
                 Type = SecuritySchemeType.Http,
-                Scheme = "Bearer"
+                Scheme = "bearer",
+                BearerFormat = "JWT",
+                In = ParameterLocation.Header
             });
 
             c.AddSecurityRequirement(doc => new OpenApiSecurityRequirement
