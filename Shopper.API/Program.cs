@@ -1,8 +1,8 @@
 using Shopper.API.Extensions;
 using Shopper.API.Middlewares;
 using Shopper.Application;
+using Shopper.Domain.Entities;
 using Shopper.Infrastructure;
-using Shopper.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddPresentation();

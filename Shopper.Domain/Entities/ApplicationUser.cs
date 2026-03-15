@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Shopper.Infrastructure.Identity;
+namespace Shopper.Domain.Entities;
 
-// Extending Entity Framework IdentityUser properties
 public class ApplicationUser : IdentityUser
 {
     public DateOnly? DateOfBirth { get; set; }
